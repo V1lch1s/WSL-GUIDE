@@ -7,13 +7,15 @@ wsl --list --online   # Distros que se pueden instalar
 wsl --list --verbose  # Vemos lo que hay instalado
 wsl --install Debian  # Debian es la distribución más ligera
 wsl --list --verbose  # Debería aparecer la nueva distro de Linux
+wsl -d Debian         # Entramos a Debian y creamos un usuario (y contraseña)
+WSL-DEBIAN:\~\> exit  # Salimos de Debian (O la distribución que tengas)
 ```
 >[!NOTE]
 > Yo uso Debian, pero tú puedes usar la distribución que quieras.
 
 ```powershell
 # Para mayor simpleza, establecemos lo siguiente como predeterminado
-wsl --set-default Debian # La distribución Debian
+wsl --set-default Debian                                  # La distribución Debian
 wsl --manage Debian --set-default-user <mi_nuevo_usuario> # El usuario que recién creamos
 ```
 
@@ -73,3 +75,6 @@ wsl
 
 >[!IMPORTANT]
 > Al final de todo lo anterior, ya no debería aparecer el archivo `.vhdx` (Imagen de Disco Duro de la distribución WSL) en el directorio de Windows: `%LOCALAPPDATA%\wsl`
+
+
+_Si la guía parece ambigua y larga es porque es introductoria, son los pasos que **yo** seguí para instalar `WSL-Debian`._
