@@ -8,7 +8,7 @@ wsl --list --verbose  # Vemos lo que hay instalado
 wsl --install Debian  # Debian es la distribución más ligera
 wsl --list --verbose  # Debería aparecer la nueva distro de Linux
 wsl -d Debian         # Entramos a Debian y creamos un usuario (y contraseña)
-WSL-DEBIAN:\~\> exit  # Salimos de Debian (O la distribución que tengas)
+WSL-DEBIAN:\~\> exit  # [Debian] Salimos de Debian (O la distribución que tengas)
 ```
 >[!NOTE]
 > Yo uso Debian, pero tú puedes usar la distribución que quieras.
@@ -58,7 +58,7 @@ wsl --export Debian "D:\WSL-distros\Debian\compilerWorkshop_bison+flex.tar" # Ex
 wsl --unregister Debian                                                     # Damos de baja Debian de WSL (wsl --list --verbose ya no debe mostrarlo)
 
 # Importamos "D:\Ubicacion\Nueva" "D:\Ubicacion\Nueva\backup.tar"
-wsl --import Debian "D:\WSL-distros\Debian" "D:\WSL-distros\Debian\compilerWorkshop_bison+flex.tar"
+wsl --import Debian "D:\Distros\NombreDistro" "D:\Distros\NombreDistro\proyectWorkshop_backup.tar"
 wsl --status             # Vemos qué está establecido por defecto
 wsl --list --verbose     # Revisamos que se importó correctamente
 wsl --set-default Debian # Si no está establecida, establecemos como distribución por defecto
@@ -77,4 +77,4 @@ wsl
 > Al final de todo lo anterior, ya no debería aparecer el archivo `.vhdx` (Imagen de Disco Duro de la distribución WSL) en el directorio de Windows: `%LOCALAPPDATA%\wsl`
 
 
-_Si la guía parece ambigua y larga es porque es introductoria, son los pasos que **yo** seguí para instalar `WSL-Debian`._
+_Si la guía parece ambigua y larga es porque es introductoria, son los pasos que **yo** seguí para instalar `WSL-Debian`_
